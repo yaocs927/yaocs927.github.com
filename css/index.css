@@ -59,7 +59,7 @@ header {
 
 header h1 {
   float: left;
-  font: 700 40px/80px "Microsoft Yahei";
+  font: 700 40px/70px "Microsoft Yahei";
   color: #3fb560;
 }
 
@@ -139,7 +139,50 @@ header .nav a:hover .left {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 1000px;
+  height: 440px;
   transform: translateX(-50%) translateY(-50%);
+}
+
+.profile .left {
+  position: relative;
+  float: left;
+  width: 400px;
+  height: 440px;
+  background-color: rgba(255, 255, 255, .2)
+}
+
+.profile .left span.wraps {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 277px;
+  height: 325px;
+  border: 5px solid #3fb560;
+  box-sizing: border-box;
+}
+
+.profile .left span.sub-line {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  display: block;
+  width: 5px;
+  height: 180px;
+  background-color: #3fb560;
+}
+
+.profile .left img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.profile .right {
+  float: right;
+  width: 600px;
+  height: 440px;
 }
 
 
