@@ -27,7 +27,6 @@ h1,h2,h3,div,p,a {
   overflow: hidden;
 }
 
-
 /*
 ===========
 * 页面样式
@@ -43,6 +42,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
 }
+
 
 /*
 ===========
@@ -135,21 +135,91 @@ header .nav a:hover .left {
 * 主要内容
 ===========
 */
+/*飞入动画*/
+@keyframes flyLeft {
+  0% {
+    transform: translateX(-2000px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes flyRight {
+  0% {
+    transform: translateX(2000px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes flyMain {
+  0% {
+    left: -2000px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+.main {
+  animation: flyLeft 1s ease 1;
+  animation-fill-mode: forwards;
+}
+
+.profile,
+.profile .left,
+.profile .right {
+  animation: flyLeft 1s ease 1;
+  animation-fill-mode: forwards;
+}
+
+.profile .left .wraps,
+.profile .right h2 {
+  animation: flyLeft 1s ease 1;
+  animation-delay: .2s;
+  animation-fill-mode: forwards;
+}
+
+.profile .left img,
+.profile .right p {
+  animation: flyLeft 1s ease 1;
+  animation-delay: .4s;
+  animation-fill-mode: forwards;
+}
+
+.profile .left .line,
+.profile .right .btn {
+  animation: flyLeft 1s ease 1;
+  animation-delay: .6s;
+  animation-fill-mode: forwards;
+}
+
+
 .main {
   position: absolute;
-  top: 50%;
   left: 50%;
   width: 1000px;
   height: 440px;
-  transform: translateX(-50%) translateY(-50%);
+  margin-left: -500px;
 }
 
+/*个人介绍*/
 .profile .left {
   position: relative;
   float: left;
-  width: 400px;
+  width: 340px;
   height: 440px;
-  background-color: rgba(255, 255, 255, .2)
 }
 
 .profile .left span.wraps {
@@ -163,9 +233,9 @@ header .nav a:hover .left {
   box-sizing: border-box;
 }
 
-.profile .left span.sub-line {
+.profile .left span.line {
   position: absolute;
-  bottom: 0;
+  bottom: 40px;
   left: 40px;
   display: block;
   width: 5px;
@@ -180,10 +250,94 @@ header .nav a:hover .left {
 }
 
 .profile .right {
+  position: relative;
   float: right;
-  width: 600px;
+  width: 660px;
   height: 440px;
+  padding: 44px 80px;
+  box-sizing: border-box;
 }
+
+.profile .right:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  background-color: #3fb560;
+}
+
+.profile .right h2 {
+  margin-bottom: 35px;
+  font: 16px/16px "Microsoft Yahei";
+  color: #3fb560;
+}
+
+.profile .right p {
+  color: #fff;
+}
+
+.profile .right p.name {
+  font: 700 24px/24px "Microsoft Yahei";
+}
+
+.profile .right p.info {
+  font: 14px/14px "Microsoft Yahei";
+}
+
+.profile .right p.i1 {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.profile .right p.i1 span {
+  display: inline-block;
+  margin: 0 10px;
+  color: rgba(255, 255, 255, .3)
+}
+
+.profile .right p.i2 {
+  line-height: 22px;
+  text-align: justify;
+}
+
+.profile .right .btn a {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  margin-top: 70px;
+  width: 140px;
+  height: 36px;
+  border: 2px solid #3fb560;
+  font: 14px/32px "Microsoft Yahei";
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile .right .btn a:before {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: -1;
+  display: block;
+  content: " ";
+  width: 0;
+  height: 36px;
+  background-color: #3fb560;
+  font: 14px/32px "Microsoft Yahei";
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.profile .right .btn a:hover:before {
+  width: 140px;
+}
+
+/*工作经历*/
 
 
 /*

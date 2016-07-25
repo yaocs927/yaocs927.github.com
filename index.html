@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>个人简历</title>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
@@ -14,21 +15,21 @@
     <div class="comWidth">
       <h1>resume</h1>
       <nav class="nav">
-        <a href="">
+        <a href="#firstPage">
           个人简介
           <span class="line top"></span>
           <span class="line right"></span>
           <span class="line bottom"></span>
           <span class="line left"></span>
         </a>
-        <a href="">
+        <a href="#secondPage">
           工作经历
           <span class="line top"></span>
           <span class="line right"></span>
           <span class="line bottom"></span>
           <span class="line left"></span>
         </a>
-        <a href="">
+        <a href="#3rdPage">
           相关作品
           <span class="line top"></span>
           <span class="line right"></span>
@@ -38,20 +39,35 @@
       </nav>
     </div>
   </header>
-  <section class="main profile" id="profile">
-    <div class="left">
-      <span class="wraps"></span>
-      <span class="sub-line>">123</span>
-      
+  <article class="main">
+    <div id="content">
+      <section class="profile section" id="profile">
+        <div class="left">
+          <span class="wraps"></span>
+          <span class="line"></span>
+          <img src="img/me.jpg" alt="个人照片">
+        </div>
+        <div class="right">
+          <h2>个人简介</h2>
+          <p class="name">姚春盛</p>
+          <p class="info i1">本科<span>|</span>上海<span>|</span>两年工作经验</p>
+          <p class="info i2">两年工作经历中主要从事设计方面，在上一份工作中接触到并喜欢上前端，想找一份前端的工作，目前工作能力可独立完成WEB页面布局编写，熟悉CSS3属性，能熟练使用原生JS和JQ写简单交互动效，熟悉响应式开发和Bootstrap框架，简单了解Ajax，能测试和修改浏览器兼容性，善用百度和Google来解决问题，虽能力有许多不足之处，但只要热爱，能力的大小是会随着时间不断增加的，我相信我会成长为一名优秀的前端开发工程师。
+          </p>
+          <div class="btn">
+            <a href="#secondPage">工作经历</a>
+          </div>
+        </div>
+      </section>
+      <section class="work section" id="work">
+        <p class="info i2">两年工作经历中主要从事设计方面，在上一份工作中接触到并喜欢上前端，想找一份前端的工作，目前工作能力可独立完成WEB页面布局编写，熟悉CSS3属性，能熟练使用原生JS和JQ写简单交互动效，熟悉响应式开发和Bootstrap框架，简单了解Ajax，能测试和修改浏览器兼容性，善用百度和Google来解决问题，虽能力有许多不足之处，但只要热爱，能力的大小是会随着时间不断增加的，我相信我会成长为一名优秀的前端开发工程师。
+        </p>
+      </section>
+      <section class="skill section" id="skill">
+        <p class="info i2">两年工作经历中主要从事设计方面，在上一份工作中接触到并喜欢上前端，想找一份前端的工作，目前工作能力可独立完成WEB页面布局编写，熟悉CSS3属性，能熟练使用原生JS和JQ写简单交互动效，熟悉响应式开发和Bootstrap框架，简单了解Ajax，能测试和修改浏览器兼容性，善用百度和Google来解决问题，虽能力有许多不足之处，但只要热爱，能力的大小是会随着时间不断增加的，我相信我会成长为一名优秀的前端开发工程师。
+        </p>
+      </section>
     </div>
-    <div class="right">
-      <h2>个人简介</h2>
-      <p>姚春盛</p>
-      <p>本科  |  上海  |  两年工作经验</p>
-      <p>从设计转行，在上一份工作中喜欢上前端，自学前端，目前工作能力可独立完成WEB页面布局编写，熟悉CSS3属性，能熟练使用原生JS和JQ写简单交互动效，熟悉响应式开发和Bootstrap框架，了解Ajax，能测试和修改浏览器兼容性，善用百度和Google来解决问题，虽能力有许多不足之处，但只要热爱，能力的大小是会随着时间不断增加的，我相信我会成长为一名优秀的前端开发工程师。</p>
-    </div>
-    
-  </section>
+  </article>
   <footer>
     <div class="comWidth">
       <div class="contact">
@@ -66,6 +82,9 @@
       </div>
     </div>
   </footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.fullpage.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
