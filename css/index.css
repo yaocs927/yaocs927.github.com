@@ -53,6 +53,7 @@ header {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 99;
   width: 100%;
   height: auto;
 }
@@ -210,7 +211,7 @@ header .nav a:hover .left {
   position: absolute;
   left: 50%;
   width: 1000px;
-  height: 440px;
+  /*height: 440px;*/
   margin-left: -500px;
 }
 
@@ -304,6 +305,7 @@ header .nav a:hover .left {
 
 .profile .right .btn a {
   position: relative;
+  z-index: 99;
   display: block;
   box-sizing: border-box;
   margin-top: 70px;
@@ -338,6 +340,150 @@ header .nav a:hover .left {
 }
 
 /*工作经历*/
+.work .left {
+  float: left;
+  width: 660px;
+  height: 300px;
+}
+
+.work .left h2 {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  font: 16px/16px "Microsoft Yahei";
+  color: #3fb560;
+}
+
+.work .left p {
+  color: #fff;
+}
+
+.work .left p.data {
+  font: 14px/14px "Microsoft Yahei";
+}
+
+.work .left p.name {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font: 700 18px/18px "Microsoft Yahei";
+}
+
+.work .left p.name span {
+  font: 14px/14px "Microsoft Yahei";
+  margin-left: 100px;
+}
+
+.work .left p.info {
+  font: 14px/22px "Microsoft Yahei";
+}
+
+.work .left p.info span {
+  color: #3fb560;
+}
+
+.work .right {
+  position: relative;
+  float: right;
+  width: 340px;
+  height: 300px;
+}
+
+.work .right span.wraps {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: block;
+  width: 250px;
+  height: 180px;
+  border: 5px solid #3fb560;
+  box-sizing: border-box;
+}
+
+.work .right span.line {
+  position: absolute;
+  top: 120px;
+  right: 60px;
+  display: block;
+  width: 5px;
+  height: 100px;
+  background-color: #3fb560;
+}
+
+.work .right img {
+  position: absolute;
+  top: 50px;
+  right: 80px;
+  width: 250px;
+  height: 188px;
+}
+
+/*技能*/
+.skill h2 {
+  margin-bottom: 35px;
+  font: 16px/16px "Microsoft Yahei";
+  color: #3fb560;
+  text-align: center;
+}
+
+.skill ul.list > li {
+  list-style: none;
+  position: relative;
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin: 0 50px;
+  border: 2px solid #3fb560;
+  border-radius: 50%;
+  font: 14px/84px "Microsoft Yahei";
+  color: #3fb560;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+} 
+
+.skill ul.list > li:hover {
+  background-color: #3fb560;
+  color: #fff;
+}
+
+.skill ul.sub-list {
+  position: absolute;
+  top: 100px;
+  left: 80px;
+  display: none;
+  box-sizing: border-box;
+  width: 200px;
+  margin-left: -140px;
+  padding: 10px;
+  background-color: #3fb560;
+  border-radius: 5px;
+}
+
+.skill ul.sub-list:before {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  content: " ";
+  width: 0;
+  height: 0;
+  margin-left: -6px;
+  border: 6px solid #3fb560;
+  border-top-color: transparent; 
+  border-left-color: transparent; 
+  border-right-color: transparent; 
+}
+
+.skill ul.sub-list > li {
+  list-style: none;
+  font: 14px/28px "Microsoft Yahei";
+  color: #fff;
+  text-align: left;
+}
+
+.skill ul.sub-list > li span {
+  margin-right: 5px;
+}
 
 
 /*
@@ -349,6 +495,7 @@ footer {
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: 80;
   width: 100%;
   height: auto;
   padding-bottom: 20px;

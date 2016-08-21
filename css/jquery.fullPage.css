@@ -66,26 +66,26 @@ html.fp-enabled,
     -khtml-user-select: none; /* webkit (konqueror) browsers */
     -ms-user-select: none; /* IE10+ */
     position: absolute;
-    z-index: 4;
+    z-index: 99;
     top: 50%;
     cursor: pointer;
     width: 0;
     height: 0;
+    margin-top: -20px;
     border-style: solid;
-    margin-top: -38px;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
 .fp-controlArrow.fp-prev {
-    left: 15px;
+    left: -50px;
     width: 0;
-    border-width: 38.5px 34px 38.5px 0;
+    border-width: 18.5px 14px 18.5px 0;
     border-color: transparent #fff transparent transparent;
 }
 .fp-controlArrow.fp-next {
-    right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
+    right: -50px;
+    border-width: 18.5px 0 18.5px 14px;
     border-color: transparent transparent transparent #fff;
 }
 .fp-scrollable {
